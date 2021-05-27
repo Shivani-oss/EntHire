@@ -15,7 +15,8 @@ export default {
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '500%',
-        padding: '20px'
+        padding: '20px',
+        margin: theme.spacing(2)
     },
     tag: {
         color: '#f44336',

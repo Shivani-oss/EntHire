@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import Data from './Data'
+import { useDispatch } from 'react-redux'
+import { stories } from './userReducer'
 
 
 
 const Story = () => {
-    
+    const dispatch = useDispatch()
     const [values, setValues] = useState({
         heading: '',
         subHeading: '',
@@ -20,13 +21,14 @@ const Story = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
+        dispatch(stories(values))
+        setValues({
+            heading: '',
+            subHeading: '',
+            about: '',
+            code: ''
+        })
         alert('Data Add Successfully!')
-        console.log(values.about)
-        console.log(values.heading)
-        console.log(values.code)
-        console.log(values.subHeading)
-       
-
     }
   
     

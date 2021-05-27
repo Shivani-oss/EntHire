@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Typography, TextField, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Heading from '../../components/Heading'
-import Data from './Data'
 import useStory from './Story'
-import Story from './Story'
-import Woww from './woww'
-
+import Data from './Data'
+import { useSelector } from 'react-redux'
 
 export default {
-    title: 'AddData',
+    title: 'Admin',
 }
+
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,11 +29,11 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export const Admin = () => {
+export const Add_Data = () => {
     const classes = useStyles()
     const { handleChange, handleSubmit, values } = useStory()
-
-
+    const story = useSelector(state => state.story.oneStoryData)
+    global.f = story.heading
     return (
         <>
 
@@ -88,9 +88,8 @@ export const Admin = () => {
                     Submit
                 </Button>
             </form>
-
         </>
     )
 }
 
- export const Heelo = () => <Story />
+export const Show_Data = () => <Data/>

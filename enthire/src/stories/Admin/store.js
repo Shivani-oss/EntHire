@@ -1,11 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import userReducer from '../Admin/userReducer'
-
+import storyReducer from '../Admin/userReducer'
 
 
 export default configureStore({ 
     reducer: {
-        user: userReducer
+        story: storyReducer
     }
 })
 
