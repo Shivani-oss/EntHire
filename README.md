@@ -4,4 +4,4 @@
 
 In Terminal
 
-cd endthire -> npm install (to install all dependencies) -> yarn storybook (start the application)
+cd enthire -> npm install (to install all dependencies) -> yarn storybook (start the application)
